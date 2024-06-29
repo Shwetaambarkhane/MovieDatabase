@@ -9,15 +9,13 @@ import SwiftUI
 
 struct MovieDetailView: View {
     let movie: Movie
-    @State private var selectedRatingSource: String = "IMDB"
+    @State private var selectedRatingSource: String = "Internet Movie Database"
     
     var body: some View {
         ScrollView {
             VStack {
-                Image(uiImage: UIImage(named: movie.poster)!)
-                    .resizable()
+                AsyncImage(url: URL(string: movie.poster))
                     .aspectRatio(contentMode: .fit)
-                
                 Text(movie.title)
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -47,8 +45,10 @@ struct MovieDetailView: View {
                         Text(source).tag(source)
                     }
                 }
-                .pickerStyle(SegmentedPickerStyle())
+                .pickerStyle(.segmented)
                 .padding()
+                
+                RatingView(rating: movie.ratings.first { $0.Source == selectedRatingSource }?.Value ?? "N/A")
             }
         }
         .navigationTitle(movie.title)

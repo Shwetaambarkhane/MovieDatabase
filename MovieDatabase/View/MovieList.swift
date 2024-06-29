@@ -55,7 +55,10 @@ struct MovieList: View {
                                     }
                                 } else {
                                     ForEach(movies) { movie in
-                                        MovieCell(movie: movie)
+                                        NavigationLink(
+                                            destination: MovieDetailView(movie: movie)) {
+                                                MovieCell(movie: movie)
+                                            }
                                     }
                                 }
                             }
