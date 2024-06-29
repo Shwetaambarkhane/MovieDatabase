@@ -45,6 +45,7 @@ struct MovieList: View {
                     List {
                         ForEach(options, id: \.self) { option in
                             Section(header: Text(option)) {
+                                if option != "All Movies" {
                                     ForEach(getValues(for: option), id: \.self) { value in
                                         Text(value)
                                             .onTapGesture {
@@ -52,6 +53,11 @@ struct MovieList: View {
                                                 print("hello1", value)
                                             }
                                     }
+                                } else {
+                                    ForEach(movies) { movie in
+                                        MovieCell(movie: movie)
+                                    }
+                                }
                             }
                         }
                     }
