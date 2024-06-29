@@ -47,19 +47,13 @@ struct MovieList: View {
                             Section(header: Text(option)) {
                                 if option != "All Movies" {
                                     ForEach(getValues(for: option), id: \.self) { value in
-                                        Text(value)
-                                            .onTapGesture {
-                                                // Show list of movies for the selected value
-                                                print("hello1", value)
+                                        NavigationLink(
+                                            destination: MovieFilteredList(movies: getFilteredMovies(with: value, option: option), attribute: option)) {
+                                                Text(value)
                                             }
                                     }
                                 } else {
-                                    ForEach(movies) { movie in
-                                        NavigationLink(
-                                            destination: MovieDetailView(movie: movie)) {
-                                                MovieCell(movie: movie)
-                                            }
-                                    }
+                                    MovieCellList(movies: movies)
                                 }
                             }
                         }
@@ -72,6 +66,27 @@ struct MovieList: View {
                 }
             }
             .navigationTitle("Movie Database")
+        }
+    }
+    
+    func getFilteredMovies(with value: String, option: String) -> [Movie] {
+        return movies.filter { movie in
+            getAttribute(from: movie, option: option).lowercased().contains(value.lowercased())
+        }
+    }
+    
+    func getAttribute(from movie: Movie, option: String) -> String {
+        switch option {
+        case "Year":
+            return movie.year
+        case "Genre":
+            return movie.movieData.Genre
+        case "Directors":
+            return movie.movieData.Director
+        case "Actors":
+            return movie.movieData.Actors
+        default:
+            return ""
         }
     }
     
