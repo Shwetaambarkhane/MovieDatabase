@@ -18,8 +18,3 @@ struct MovieData: Decodable {
     let Plot: String
     let Ratings: [Rating]
 }
-
-struct Rating: Decodable {
-    let Source: String
-    let Value: String
-}

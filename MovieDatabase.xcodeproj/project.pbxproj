@@ -19,6 +19,7 @@
 		AA8CDBCD2C30161F00A8D964 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AA8CDBCC2C30161F00A8D964 /* movies.json */; };
 		AA8CDBCF2C301C7800A8D964 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CDBCE2C301C7800A8D964 /* Movie.swift */; };
 		AA8CDBD12C3042CC00A8D964 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CDBD02C3042CC00A8D964 /* MovieCell.swift */; };
+		AA8CDBD52C307FAC00A8D964 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8CDBD42C307FAC00A8D964 /* Rating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		AA8CDBCC2C30161F00A8D964 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AA8CDBCE2C301C7800A8D964 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		AA8CDBD02C3042CC00A8D964 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		AA8CDBD42C307FAC00A8D964 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,7 @@
 			children = (
 				AA8CDBC42C2FFE6B00A8D964 /* MovieData.swift */,
 				AA8CDBCC2C30161F00A8D964 /* movies.json */,
-				AA8CDBCE2C301C7800A8D964 /* Movie.swift */,
+				AA8CDBD42C307FAC00A8D964 /* Rating.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				AA8CDBC22C2FFE2B00A8D964 /* JSONLoader.swift */,
+				AA8CDBCE2C301C7800A8D964 /* Movie.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				AA8CDBC32C2FFE2B00A8D964 /* JSONLoader.swift in Sources */,
 				AA8CDBC92C30001500A8D964 /* SearchBar.swift in Sources */,
 				AA8CDBCF2C301C7800A8D964 /* Movie.swift in Sources */,
+				AA8CDBD52C307FAC00A8D964 /* Rating.swift in Sources */,
 				AA8CDBCB2C30009600A8D964 /* MovieDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
