@@ -15,7 +15,6 @@ struct MovieList: View {
     }()
     
     @State private var searchText: String = ""
-    @State private var selectedMovie: Movie?
     
     let options = ["Year", "Genre", "Directors", "Actors", "All Movies"]
     
@@ -44,8 +43,8 @@ struct MovieList: View {
                 if searchText.isEmpty {
                     CategoryList(options: options, movies: movies)
                 } else {
-                    List(filteredMovies, selection: $selectedMovie) { movie in
-                        MovieCell(movie: movie)
+                    List {
+                        MovieCellList(movies: filteredMovies)
                     }
                 }
             }

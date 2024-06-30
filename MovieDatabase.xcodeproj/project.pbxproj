@@ -101,8 +101,8 @@
 			children = (
 				AA8CDBC62C2FFED900A8D964 /* MovieList.swift */,
 				AA8CDBC82C30001500A8D964 /* SearchBar.swift */,
-				AA8CDBCA2C30009600A8D964 /* MovieDetailView.swift */,
 				AA8CDBD02C3042CC00A8D964 /* MovieCell.swift */,
+				AA8CDBCA2C30009600A8D964 /* MovieDetailView.swift */,
 				AA8CDBD62C308B4400A8D964 /* RatingView.swift */,
 				AA8CDBD82C3097B200A8D964 /* MovieFilteredList.swift */,
 				AA8CDBDA2C30A2AF00A8D964 /* MovieCellList.swift */,
